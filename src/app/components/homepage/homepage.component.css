@@ -1,0 +1,30 @@
+.example-card {
+  max-width: 400px;
+}
+
+mat-card {
+  background-color: floralwhite;
+  top: 100px;
+}
+.center-content {
+  text-align: -webkit-center;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+.mat-button {
+  width: 100%;
+}
+mat-card-header {
+  justify-content: center;
+}
+.container {
+  overflow: hidden;
+}
