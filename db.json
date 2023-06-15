@@ -1,14 +1,9 @@
 {
   "user": [
     {
-      "email": "hello@hello.com",
-      "password": "hello",
+      "email": "admin@test.com",
+      "password": "admin123",
       "id": 1
-    },
-    {
-      "email": "test@test.com",
-      "password": "test1234",
-      "id": 2
     }
   ]
 }

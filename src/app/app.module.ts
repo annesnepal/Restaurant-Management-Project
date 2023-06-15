@@ -14,6 +14,8 @@ import { UpdateRestroComponent } from './components/pages/update-restro/update-r
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { HeaderComponent } from './components/pages/header/header.component';
+import { FooterComponent } from './components/pages/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,8 @@ import { ToastrModule } from 'ngx-toastr';
     ListRestroComponent,
     UpdateRestroComponent,
     DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

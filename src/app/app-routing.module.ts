@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -10,7 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    loadChildren: () =>
+      import('./components/modules/admin/admin.module').then(
+        (m) => m.AdminModule
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
   },
 ];
 

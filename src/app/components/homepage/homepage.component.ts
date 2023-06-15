@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';
 import {
   AbstractControl,
@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent implements AfterViewInit {
+export class HomepageComponent implements OnInit {
   @ViewChild('tabGroup') tabGroup!: MatTabGroup;
   hideLoginPassword = true;
   hideRegisterPassword = true;
@@ -48,11 +48,10 @@ export class HomepageComponent implements AfterViewInit {
     private route: Router
   ) {}
 
-  ngAfterViewInit(): void {
-    if (this.registrationComplete) {
-      this.tabGroup.selectedIndex = 0; // Switch to the login tab
+  ngOnInit() {
+    if (this.auth.isLoggedIn()) {
+      this.route.navigate(['dashboard']);
     }
-    // console.log('ngAfterViewInit called');
   }
 
   passwordMatchValidator(
@@ -78,6 +77,7 @@ export class HomepageComponent implements AfterViewInit {
         );
       });
       if (user) {
+        this.auth.setToken();
         this.loginForm.reset();
         this.toastr.success('Login Successfully', 'Success !!!');
         this.route.navigate(['dashboard']);
@@ -100,6 +100,7 @@ export class HomepageComponent implements AfterViewInit {
       );
       this.registerForm.reset();
       this.registrationComplete = true;
+      this.tabGroup.selectedIndex = 0;
     });
   }
   getErrorOnLogin(controlName: string) {
