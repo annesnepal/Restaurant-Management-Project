@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/pages/header/header.component';
 import { FooterComponent } from './components/pages/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { FooterComponent } from './components/pages/footer/footer.component';
       progressAnimation: 'increasing',
       positionClass: 'toast-top-right',
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

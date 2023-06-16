@@ -10,11 +10,10 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   if (!auth.isLoggedIn()) {
     router.navigate(['']);
-    toastr.warning('Please login again !!!', 'Session Expired');
+    toastr.warning('Please login to continue !!!', 'Session Expired');
 
     return false;
   }
 
   return auth.isLoggedIn();
-  // return false;
 };

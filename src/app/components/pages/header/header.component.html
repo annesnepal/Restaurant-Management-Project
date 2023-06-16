@@ -1,25 +1,16 @@
-<p>
+<header>
+  <p>
     <mat-toolbar color="primary">
-      <span>Restro</span>
-         <a routerLink="add-restro" >
-             <button mat-button>Add Restaurant</button>
-         </a>
-         <a routerLink="list-restro">
-            <button mat-button >List Restaurant</button>
-        </a>
-        <a routerLink="update-restro">
-            <button mat-button >Update Restaurant</button>
-        </a>
-        
-        <!-- <a>
-            <button mat-button>Primary</button>
-        </a>
-        <a>
-            <button mat-button>Primary</button>
-        </a> -->
+      <span role="button" routerLink="">Restro</span>
+      <a mat-button routerLink="add-restro"> Add Restaurant </a>
+      <a mat-button routerLink="list-restro"> List Restaurant </a>
+      <a mat-button routerLink="update-restro"> Update Restaurant </a>
       <span class="example-spacer"></span>
       <a>
-        <button mat-raised-button color="accent" (click)="onLogout()">Logout</button>
-    </a>
+        <button mat-raised-button color="accent" (click)="onLogout()">
+          Logout
+        </button>
+      </a>
     </mat-toolbar>
   </p>
+</header>

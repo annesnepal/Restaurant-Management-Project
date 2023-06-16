@@ -11,3 +11,5 @@ body {
 }
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
