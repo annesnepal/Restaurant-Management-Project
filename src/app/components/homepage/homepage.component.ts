@@ -79,8 +79,8 @@ export class HomepageComponent implements OnInit {
       if (user) {
         this.auth.setToken();
         this.loginForm.reset();
-        this.toastr.success('Login Successfully', 'Success !!!');
         this.route.navigate(['dashboard']);
+        this.toastr.success('Login Successfully', 'Success !!!');
       } else {
         // User not found, handle error
         this.toastr.error('Incorrect email or password.', 'Invalid user');

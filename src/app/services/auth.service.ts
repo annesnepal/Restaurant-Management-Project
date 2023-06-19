@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Observable } from 'rxjs'; //change for jwt
+import * as jwt from 'jsonwebtoken'; //change for jwt
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  url = 'http://localhost:3000/user';
+  private baseUrl = 'http://localhost:3000/user';
   constructor(private http: HttpClient, private router: Router) {}
 
   addUser(data: any) {
-    return this.http.post(this.url, data);
+    return this.http.post(this.baseUrl, data);
   }
   findUser() {
-    return this.http.get<any[]>(this.url);
+    return this.http.get<any[]>(this.baseUrl);
   }
   setToken() {
     localStorage.setItem(

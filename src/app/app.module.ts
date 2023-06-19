@@ -17,6 +17,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './components/pages/header/header.component';
 import { FooterComponent } from './components/pages/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SideNavComponent } from './components/pages/side-nav/side-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       positionClass: 'toast-top-right',
     }),
     NgbModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
