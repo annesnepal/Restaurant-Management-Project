@@ -1,0 +1,23 @@
+.dialog {
+  background-color: antiquewhite;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__title {
+  text-align: center;
+  color: rgb(247, 13, 13);
+  padding: 10px;
+}
+::ng-deep .mat-mdc-dialog-actions.mdc-dialog__actions {
+  justify-content: space-between;
+}
+::ng-deep
+  .mdc-button.mat-mdc-button.mat-unthemed.mat-mdc-button-base:nth-child(1) {
+  color: green;
+}
+::ng-deep
+  .mdc-button.mat-mdc-button.mat-unthemed.mat-mdc-button-base:nth-child(2) {
+  color: rgb(233, 25, 25);
+}
+h1 {
+  margin-top: 10px;
+}

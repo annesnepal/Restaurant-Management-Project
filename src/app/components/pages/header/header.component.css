@@ -1,3 +1,34 @@
 mat-toolbar {
   font-family: "Poppins", sans-serif;
+  height: calc(73px);
+}
+.toggle-bar {
+  margin-top: 10px;
+}
+
+.search-box {
+  font-size: 1rem;
+  padding: 10px 20px;
+  width: 75%;
+  height: 75%;
+  border-radius: 50px;
+  margin-top: 12px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+.profile-btn {
+  margin-right: 10px;
+}
+
+.image-button {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+::ng-deep .mat-mdc-menu-content.mdc-list.ng-tns-c2693957067-1 {
+  padding: 0;
+}
+::ng-deep .mdc-list-item__primary-text {
+  color: #0d6efd;
 }

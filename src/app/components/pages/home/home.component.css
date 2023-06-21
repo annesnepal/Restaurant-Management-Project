@@ -1,0 +1,65 @@
+.main-container {
+  height: 175px;
+}
+mat-card {
+  width: 200px;
+}
+.first-card,
+.second-card,
+.third-card,
+.fourth-card,
+.fifth-card {
+  top: 20px;
+  max-width: 200px;
+  margin-left: 18px;
+  height: 120px;
+  box-shadow: border-box;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+
+.second-card {
+  background-color: rgb(193, 252, 232);
+}
+.third-card {
+  background-color: rgb(195, 250, 252);
+}
+.fourth-card {
+  background-color: rgb(245, 227, 248);
+}
+.mat-mdc-card-title {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+.mat-mdc-card-header {
+  padding: 0;
+}
+.mat-mdc-card-content {
+  font-size: 40px;
+  /* margin-bottom: 10px; */
+  margin-left: 20px;
+  padding: 0;
+}
+.mat-mdc-card-footer {
+  margin-left: 30px;
+}
+div:first-child {
+  padding-top: 8px;
+}
+div:last-child {
+  padding-bottom: 5px;
+}
+
+/* Table CSS */
+.container {
+  width: 50%;
+  margin: 0;
+}
+table {
+  background-color: rgb(226, 245, 182);
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+  height: 28px;
+}

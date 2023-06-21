@@ -19,6 +19,8 @@ import { FooterComponent } from './components/pages/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavComponent } from './components/pages/side-nav/side-nav.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { LogoutConfirmDialogComponent } from './components/pages/header/logout-confirm-dialog/logout-confirm-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { SideNavComponent } from './components/pages/side-nav/side-nav.component
     HeaderComponent,
     FooterComponent,
     SideNavComponent,
+    HomeComponent,
+    LogoutConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,

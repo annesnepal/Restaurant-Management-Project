@@ -1,0 +1,11 @@
+<div class="dialog">
+  <div mat-dialog-title>
+    <img src="../../../../../assets/images/warning.jpg" alt="" />
+    <h1>Are you leaving?</h1>
+  </div>
+  <div mat-dialog-content>Are you sure want to Logout?</div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-button mat-dialog-close (click)="onLogout()">Yes</button>
+  </div>
+</div>
