@@ -1,24 +1,22 @@
 <mat-card class="example-card">
-    <mat-card-header >
-      <mat-card-title>Add Restaurant</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form [formGroup]="addRestro">
-        <mat-form-field>
-            <mat-label>Restaurant Name</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="pat@example.com">
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <button class="mat-button" mat-raised-button color="primary">
-            Add
-          </button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>Add Restaurant</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="addRestro" (ngSubmit)="collectRestro()">
+      <mat-form-field>
+        <mat-label>Restaurant Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" />
+      </mat-form-field>
+      <button class="mat-button" mat-raised-button color="primary">ADD</button>
+    </form>
+  </mat-card-content>
+</mat-card>

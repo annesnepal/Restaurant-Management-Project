@@ -3,7 +3,8 @@
 }
 
 mat-card {
-  background-color: floralwhite;
+  background-color: #4b0082;
+  transform: translate(60%, 30%);
 }
 .mat-button {
   width: 100%;
@@ -14,4 +15,7 @@ mat-form-field {
 }
 mat-card-header {
   justify-content: center;
+}
+mat-card-title {
+  color: #74ff74;
 }

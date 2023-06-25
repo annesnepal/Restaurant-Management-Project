@@ -92,38 +92,122 @@
 </div>
 
 <!--Recently Added Restro  -->
-<div class="container">
-  <h2>Recently Added</h2>
-  <!-- List of Restro in Table -->
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+<div class="restro-details d-flex">
+  <div class="container">
+    <h2>Recently Added</h2>
+    <!-- List of Restro in Table -->
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
+      The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef>No.</th>
-      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-    </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+      </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-    </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef>Address</th>
-      <td mat-cell *matCellDef="let element">{{ element.address }}</td>
-    </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+      </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef>Contact</th>
-      <td mat-cell *matCellDef="let element">{{ element.contact }}</td>
-    </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef>Contact</th>
+        <td mat-cell *matCellDef="let element">{{ element.contact }}</td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+  <!-- right side details -->
+  <div class="container right-side">
+    <h2>Top Listed Restaurants</h2>
+    <mat-card class="list item right-side-card">
+      <mat-card-content class="card-content">
+        <mat-list role="list" class="d-flex">
+          <div class="p-0">
+            <mat-list-item role="listitem">Shyam Pasal</mat-list-item>
+            <mat-list-item role="listitem">Ram Sekuwa</mat-list-item>
+            <mat-list-item role="listitem">Sita Bakery</mat-list-item>
+            <mat-list-item role="listitem">Rock Fast Food</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+            <mat-list-item role="listitem">Item 4</mat-list-item>
+            <mat-list-item role="listitem">Item 5</mat-list-item>
+            <mat-list-item role="listitem">Item 6</mat-list-item>
+            <mat-list-item role="listitem">Item 7</mat-list-item>
+          </div>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

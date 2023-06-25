@@ -6,6 +6,7 @@ import { AddRestroComponent } from '../../pages/add-restro/add-restro.component'
 import { UpdateRestroComponent } from '../../pages/update-restro/update-restro.component';
 import { authGuard } from 'src/app/guards/auth.guard';
 import { HomeComponent } from 'src/app/components/pages/home/home.component';
+import { TestComponent } from '../../pages/test/test.component';
 
 const routes: Routes = [
   {
@@ -14,16 +15,20 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: 'add-restro',
+        path: 'add',
         component: AddRestroComponent,
       },
       {
-        path: 'list-restro',
+        path: 'list',
         component: ListRestroComponent,
       },
       {
-        path: 'update-restro',
+        path: 'update/:id',
         component: UpdateRestroComponent,
+      },
+      {
+        path: 'test',
+        component: TestComponent,
       },
       {
         path: '',

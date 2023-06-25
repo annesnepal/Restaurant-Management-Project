@@ -3,7 +3,7 @@
 }
 
 mat-card {
-  background-color: floralwhite;
+  background-color: #cda2d8;
   top: 100px;
 }
 .center-content {
@@ -24,6 +24,7 @@ mat-card {
 }
 mat-card-header {
   justify-content: center;
+  color: #4b0082;
 }
 .container {
   overflow: hidden;

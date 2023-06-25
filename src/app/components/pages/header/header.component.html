@@ -8,9 +8,16 @@
       </div>
       <!-- Search field -->
       <div>
-        <input type="text" class="search-box" placeholder="Search restro" />
+        <input
+          type="text"
+          class="search-box"
+          placeholder="Search restro"
+          (input)="search($event)"
+          routerLink="list"
+        />
       </div>
     </div>
+    <!-- User Profile Btn -->
     <div class="profile-btn">
       <button
         class="image-button"

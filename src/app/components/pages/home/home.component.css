@@ -1,8 +1,10 @@
 .main-container {
   height: 175px;
+  min-width: 100%;
 }
 mat-card {
-  width: 200px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .first-card,
 .second-card,
@@ -10,7 +12,7 @@ mat-card {
 .fourth-card,
 .fifth-card {
   top: 20px;
-  max-width: 200px;
+  width: 300px;
   margin-left: 18px;
   height: 120px;
   box-shadow: border-box;
@@ -53,7 +55,7 @@ div:last-child {
 
 /* Table CSS */
 .container {
-  width: 50%;
+  width: 100%;
   margin: 0;
 }
 table {
@@ -62,4 +64,33 @@ table {
 
 .mat-mdc-table .mdc-data-table__header-row {
   height: 28px;
+}
+
+/* right side css */
+
+.right-side {
+  padding-top: 8px;
+  padding-right: 0px;
+}
+.right-side-card {
+  height: 340px;
+  background-color: rgb(245, 227, 248);
+}
+ol {
+  padding: 0;
+  margin: 0;
+}
+.mat-mdc-card-content.card-content {
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+mat-list {
+  padding: 0;
+}
+mat-list-item {
+  border-bottom: 1px dotted black;
+}
+mat-list-item:last-child {
+  border: none;
 }

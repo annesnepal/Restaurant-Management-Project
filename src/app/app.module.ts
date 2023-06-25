@@ -21,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavComponent } from './components/pages/side-nav/side-nav.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LogoutConfirmDialogComponent } from './components/pages/header/logout-confirm-dialog/logout-confirm-dialog.component';
+import { TestComponent } from './components/pages/test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { LogoutConfirmDialogComponent } from './components/pages/header/logout-c
     SideNavComponent,
     HomeComponent,
     LogoutConfirmDialogComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
