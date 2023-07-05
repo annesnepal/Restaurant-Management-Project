@@ -1,24 +1,24 @@
-<mat-card class="example-card d-flex flex-col">
-  <mat-card-header>
-    <mat-card-title>Update Restaurant</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
+
+<h1 mat-dialog-title class="d-flex justify-content-center pt-3">Update Restaurant</h1>
+
+<div mat-dialog-content>
+
     <form [formGroup]="editRestro" (ngSubmit)="collection()">
       <mat-form-field>
-        <mat-label>Restaurant Name</mat-label>
-        <input matInput formControlName="name" />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="pat@example.com" formControlName="email" />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="address" />
-      </mat-form-field>
-      <button class="mat-button" mat-raised-button color="primary">
-        UPDATE
-      </button>
-    </form>
-  </mat-card-content>
-</mat-card>
+      <mat-label>Restaurant Name</mat-label>
+      <input matInput formControlName="name"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address" />
+    </mat-form-field>
+    <div class="d-flex justify-content-between">
+      <button class="mat-button" mat-raised-button type="button" [mat-dialog-close]="false" color="warn">CANCEL</button>
+      <button class="mat-button" mat-raised-button color="primary">UPDATE</button>
+    </div>
+  </form>
+</div>

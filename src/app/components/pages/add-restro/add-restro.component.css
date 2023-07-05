@@ -1,21 +1,4 @@
-.example-card {
-  max-width: 400px;
-}
-
-mat-card {
-  background-color: #4b0082;
-  transform: translate(60%, 30%);
-}
-.mat-button {
-  width: 100%;
-}
-mat-form-field {
-  width: 100%;
-  margin-top: 10px;
-}
-mat-card-header {
-  justify-content: center;
-}
-mat-card-title {
-  color: #74ff74;
+form{
+  display: flex;
+  flex-direction: column;
 }

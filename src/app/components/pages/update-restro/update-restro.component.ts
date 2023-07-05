@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, Inject, OnChanges, OnInit } from '@angular/core';
+import { FormGroup, FormControl} from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { RestroService } from 'src/app/services/restro.service';
@@ -10,39 +11,23 @@ import Swal from 'sweetalert2';
   templateUrl: './update-restro.component.html',
   styleUrls: ['./update-restro.component.css'],
 })
-export class UpdateRestroComponent {
-  // alert: boolean = false;
+export class UpdateRestroComponent implements OnInit{
+  //  editRestro!: FormGroup;
+   editRestro = new FormGroup({
+     name: new FormControl(''),
+     email: new FormControl(''),
+     address: new FormControl(''),
+   });
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogData: any, private restro: RestroService,private dialogRef : MatDialogRef<UpdateRestroComponent>) {}
 
-  editRestro = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    address: new FormControl(''),
-  });
-  constructor(
-    private router: ActivatedRoute,
-    private restro: RestroService,
-    private route: Router
-  ) {
-    // console.warn(this.router.snapshot.params['id']);
-
-    this.restro
-      .getCurrentRestro(this.router.snapshot.params['id'])
-      .subscribe((result: any) => {
-        // console.log('result', result);
-        this.editRestro = new FormGroup({
-          name: new FormControl(result['name']),
-          email: new FormControl(result['email']),
-          address: new FormControl(result['address']),
-        });
-      });
+  ngOnInit(): void {
+      this.editRestro.patchValue(this.dialogData)
   }
-  collection() {
-    this.restro
-      .updateRestro(this.router.snapshot.params['id'], this.editRestro.value)
-      .subscribe((result) => {
-        console.log('updated result', result);
-        this.route.navigate(['/list']);
-      });
+  collection(){
+    this.restro.updateRestro(this.dialogData.id, this.editRestro.value).subscribe(()=>{
+      this.editRestro.reset();
+      this.dialogRef.close(true);
+    });
     Swal.fire({
       // position: 'top-end',
       position: 'center',

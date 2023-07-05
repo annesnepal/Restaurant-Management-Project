@@ -1,13 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs'; //change for jwt
-import * as jwt from 'jsonwebtoken'; //change for jwt
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/user';
+  private baseUrl = 'https://restro-nm19.onrender.com/user';
   constructor(private http: HttpClient, private router: Router) {}
 
   addUser(data: any) {

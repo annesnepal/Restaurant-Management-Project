@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { RestroService } from 'src/app/services/restro.service';
 
 import Swal from 'sweetalert2';
@@ -14,10 +15,11 @@ export class AddRestroComponent {
     email: new FormControl(''),
     address: new FormControl(''),
   });
-  constructor(private restro: RestroService) {}
+  constructor(private restro: RestroService, private dialogRef : MatDialogRef<AddRestroComponent>) {}
   collectRestro() {
     this.restro.saveRestro(this.addRestro.value).subscribe(() => {
       this.addRestro.reset();
+      this.dialogRef.close(true);
     });
     Swal.fire({
       // position: 'top-end',

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddRestroComponent } from './components/pages/add-restro/add-restro.component';
 import { ListRestroComponent } from './components/pages/list-restro/list-restro.component';
 import { UpdateRestroComponent } from './components/pages/update-restro/update-restro.component';
@@ -21,7 +21,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavComponent } from './components/pages/side-nav/side-nav.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LogoutConfirmDialogComponent } from './components/pages/header/logout-confirm-dialog/logout-confirm-dialog.component';
-import { TestComponent } from './components/pages/test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +34,13 @@ import { TestComponent } from './components/pages/test/test.component';
     SideNavComponent,
     HomeComponent,
     LogoutConfirmDialogComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     MaterialModule,
     ToastrModule.forRoot({

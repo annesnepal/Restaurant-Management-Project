@@ -8,76 +8,22 @@
   ],
   "restaurant-details": [
     {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 1
-    },
-    {
-      "name": "Sunil Dhawa",
-      "email": "sunidhawa@test.com",
-      "address": "Aadarshanagar",
+      "name": "bat",
+      "email": "bat@test.com",
+      "address": "Parsa",
       "id": 2
     },
     {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
+      "name": "cat",
+      "email": "cat@test.com",
+      "address": "Simara",
       "id": 3
     },
     {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
+      "name": "apple",
+      "email": "apple@test.com",
+      "address": "Birta",
       "id": 4
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 5
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 6
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 7
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 8
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 9
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 10
-    },
-    {
-      "name": "Shyam Sundar",
-      "email": "shyam@test.com",
-      "address": "Birgunj",
-      "id": 11
-    },
-    {
-      "name": "Krishna",
-      "email": "krishna@krishna.com",
-      "address": "krishnanagar",
-      "id": 12
     }
   ]
 }
